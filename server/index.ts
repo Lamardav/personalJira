@@ -12,12 +12,12 @@ app.use(cookieParser())
 app.use(cors())
 
 const start = async () => {
-    try {
-        await mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true})
-        app.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${PORT}`))
-    } catch (e) {
-        console.log(e)
-    }
+  try {
+    await mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+    app.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${PORT}`))
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 start()
